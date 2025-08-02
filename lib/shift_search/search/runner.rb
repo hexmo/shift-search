@@ -6,6 +6,18 @@ module ShiftSearch
       end
 
       def run(query, key)
+        if @data.empty?
+          puts "No client data to search."
+          return
+        end
+
+        unless @data.first.key?(key)
+          puts "The field '#{key}' is not present in the client records."
+          available_keys = @data.first.keys.join(", ")
+          puts "Available fields: #{available_keys}"
+          return
+        end
+
         results = @data.select do |client|
           client[key].to_s.downcase.include?(query.downcase)
         end
@@ -21,3 +33,4 @@ module ShiftSearch
     end
   end
 end
+
