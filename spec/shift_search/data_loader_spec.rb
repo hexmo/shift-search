@@ -26,7 +26,7 @@ RSpec.describe ShiftSearch::DataLoader do
 
     it "raises JSON::ParserError on empty file" do
       expect { described_class.load(empty_file) }
-        .to raise_error(JSON::ParserError, /unexpected token at ''/)
+        .to raise_error(JSON::ParserError, /Expected '\{' or '\['/)
     end
   end
 end
