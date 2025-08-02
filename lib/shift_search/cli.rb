@@ -42,7 +42,7 @@ module ShiftSearch
         data = ShiftSearch::DataLoader.load(options[:file])
       rescue => e
         puts "Error loading data: #{e.message}"
-        exit 1
+        return
       end
 
       if options[:search]
