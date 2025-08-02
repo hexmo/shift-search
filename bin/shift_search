@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative "../lib/shift_search"
+
+ShiftSearch::CLI.new.run(ARGV)
