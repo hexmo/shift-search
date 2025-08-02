@@ -18,7 +18,8 @@ module ShiftSearch
         File.write(output_path, formatted)
         puts "Results saved to #{output_path}"
       else
-        puts formatted
+        print formatted
+        print "\n" unless formatted.empty?
       end
     end
 
