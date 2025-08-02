@@ -5,15 +5,17 @@ module ShiftSearch
         @data = data
       end
 
-      def run(query)
+      def run(query, key)
         results = @data.select do |client|
-          client["full_name"].to_s.downcase.include?(query.downcase)
+          client[key].to_s.downcase.include?(query.downcase)
         end
 
         if results.any?
-          results.each { |r| pp "#{r['id']}: #{r['full_name']} (#{r['email']})" }
+          results.each do |r|
+            puts "#{r['id']}: #{r[key]} (#{r['email']})"
+          end
         else
-          pp "No matches found for '#{query}'"
+          puts "No matches found for '#{query}' in '#{key}'"
         end
       end
     end

@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "legal_name": "John Doe",
+    "email": "john.doe@gmail.com"
+  },
+  {
+    "id": 2,
+    "legal_name": "Jane Smith",
+    "email": "jane.smith@yahoo.com"
+  },
+  {
+    "id": 3,
+    "legal_name": "Alex Johnson",
+    "email": "alex.johnson@hotmail.com"
+  },
+  {
+    "id": 4,
+    "legal_name": "Michael Williams",
+    "email": "michael.williams@outlook.com"
+  },
+  {
+    "id": 5,
+    "legal_name": "Emily Brown",
+    "email": "emily.brown@aol.com"
+  },
+  {
+    "id": 6,
+    "legal_name": "William Davis",
+    "email": "william.davis@icloud.com"
+  },
+  {
+    "id": 7,
+    "legal_name": "Olivia Miller",
+    "email": "olivia.miller@protonmail.com"
+  },
+  {
+    "id": 8,
+    "legal_name": "James Wilson",
+    "email": "james.wilson@yandex.com"
+  },
+  {
+    "id": 9,
+    "legal_name": "Ava Taylor",
+    "email": "ava.taylor@mail.com"
+  },
+  {
+    "id": 10,
+    "legal_name": "Michael Brown",
+    "email": "michael.brown@inbox.com"
+  },
+  {
+    "id": 11,
+    "legal_name": "Sophia Garcia",
+    "email": "sophia.garcia@zoho.com"
+  },
+  {
+    "id": 12,
+    "legal_name": "Emma Lopez",
+    "email": "emma.lopez@protonmail.ch"
+  },
+  {
+    "id": 13,
+    "legal_name": "Liam Martinez",
+    "email": "liam.martinez@fastmail.fm"
+  },
+  {
+    "id": 14,
+    "legal_name": "Isabella Rodriguez",
+    "email": "isabella.rodriguez@me.com"
+  },
+  {
+    "id": 15,
+    "legal_name": "Another Jane Smith",
+    "email": "jane.smith@yahoo.com"
+  },
+  {
+    "id": 16,
+    "legal_name": "Benjamin Lee",
+    "email": "benjamin.lee@gmail.com"
+  },
+  {
+    "id": 17,
+    "legal_name": "Charlotte Harris",
+    "email": "charlotte.harris@yahoo.com"
+  },
+  {
+    "id": 18,
+    "legal_name": "Lucas Clark",
+    "email": "lucas.clark@outlook.com"
+  },
+  {
+    "id": 19,
+    "legal_name": "Mia Lewis",
+    "email": "mia.lewis@icloud.com"
+  },
+  {
+    "id": 20,
+    "legal_name": "Henry Walker",
+    "email": "henry.walker@zoho.com"
+  },
+  {
+    "id": 21,
+    "legal_name": "Amelia Hall",
+    "email": "amelia.hall@mail.com"
+  },
+  {
+    "id": 22,
+    "legal_name": "Sebastian Allen",
+    "email": "sebastian.allen@hotmail.com"
+  },
+  {
+    "id": 23,
+    "legal_name": "Evelyn Young",
+    "email": "evelyn.young@aol.com"
+  },
+  {
+    "id": 24,
+    "legal_name": "Daniel King",
+    "email": "daniel.king@protonmail.ch"
+  },
+  {
+    "id": 25,
+    "legal_name": "Harper Scott",
+    "email": "harper.scott@yandex.com"
+  },
+  {
+    "id": 26,
+    "legal_name": "Matthew Green",
+    "email": "matthew.green@me.com"
+  },
+  {
+    "id": 27,
+    "legal_name": "Ella Adams",
+    "email": "ella.adams@inbox.com"
+  },
+  {
+    "id": 28,
+    "legal_name": "Logan Baker",
+    "email": "logan.baker@protonmail.com"
+  },
+  {
+    "id": 29,
+    "legal_name": "Abigail Nelson",
+    "email": "abigail.nelson@icloud.com"
+  },
+  {
+    "id": 30,
+    "legal_name": "Jackson Carter",
+    "email": "jackson.carter@fastmail.fm"
+  },
+  {
+    "id": 31,
+    "legal_name": "Grace Mitchell",
+    "email": "grace.mitchell@yahoo.com"
+  },
+  {
+    "id": 32,
+    "legal_name": "David Perez",
+    "email": "david.perez@gmail.com"
+  },
+  {
+    "id": 33,
+    "legal_name": "Chloe Roberts",
+    "email": "chloe.roberts@hotmail.com"
+  },
+  {
+    "id": 34,
+    "legal_name": "Samuel Turner",
+    "email": "samuel.turner@outlook.com"
+  },
+  {
+    "id": 35,
+    "legal_name": "Victoria Phillips",
+    "email": "victoria.phillips@aol.com"
+  }
+]

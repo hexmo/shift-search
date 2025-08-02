@@ -3,7 +3,7 @@ require "optparse"
 module ShiftSearch
   class CLI
     def run(args)
-      options = { file: "data/clients.json" }
+      options = { file: "data/clients.json", key: "full_name" }
 
       OptionParser.new do |opts|
         opts.banner = "Usage: shift_search [options]"
@@ -12,6 +12,10 @@ module ShiftSearch
           options[:search] = query
         end
 
+        opts.on("-kKEY", "--key=KEY", "Field to search (e.g. full_name, email)") do |key|
+          options[:key] = key
+        end
+        
         opts.on("--duplicates", "Find duplicate emails") do
           options[:duplicates] = true
         end
@@ -21,7 +25,7 @@ module ShiftSearch
         end
 
         opts.on("-h", "--help", "Show help") do
-          pp opts
+          puts opts
           exit
         end
       end.parse!(args)
@@ -29,11 +33,11 @@ module ShiftSearch
       data = ShiftSearch::DataLoader.load(options[:file])
 
       if options[:search]
-        ShiftSearch::Search::Runner.new(data).run(options[:search])
+        ShiftSearch::Search::Runner.new(data).run(options[:search], options[:key])
       elsif options[:duplicates]
         ShiftSearch::Duplicates::Runner.new(data).run
       else
-        pp "No command given. Use --help to see available options."
+        puts "No command given. Use --help to see available options."
       end
 
       # TODO: implement output formatter (CSV, JSON, etc.)
