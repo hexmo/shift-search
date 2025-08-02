@@ -15,6 +15,7 @@ A ruby based CLI tool for searching and managing data with support for JSON data
 - [Examples](#examples)
 - [Development](#development)
 - [Troubleshooting](#troubleshooting)
+- [Enhancement Proposal](#enhancement-proposal)
 
 ## Prerequisites
 
@@ -338,3 +339,28 @@ If the project includes tests, you can run them with:
 # Run all tests
 bundle exec rspec
 ```
+
+-----------------------
+
+# Enhancement Proposal
+
+## 1. Write better `Specs`
+
+Most of my TEST cases were generated using LLMs due to time constraints and they reference the `data` folder or statically defined values for test data. Although the TEST are working OK and they cover multiple edge case scenarios they could have been written in better ways and we could have use some mock data generators like [FactoryBot](https://github.com/thoughtbot/factory_bot) instead of hardcoded data for the TEST. We could have also easily use MiniTest as it is already part of ruby to avoid extra dependencies.
+
+## 2. Coding improvements
+
+- Use gems like [Thor](https://github.com/rails/thor) for building CLI apps as it is more powerful for creating CLI apps.
+- Decouple the `output_formatter` from `search` and `duplicate` runners.
+
+## 3. Future Implementation
+
+- Implement human friendly better error messages.
+- Implement logging with verbosity(debug, info, error e.t.c)
+- Add support for different kinds of input files
+
+## 4. CI/CD pipelines and RuboCop
+
+- Implement RuboCop for code linting and formatting.
+- Add CI pipelines for automated testing (I have one closed PR for this stuck due to billing issues with GitHub)
+- Add pre-commit hooks for running linter and tests before committing.
