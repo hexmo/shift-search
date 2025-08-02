@@ -1,6 +1,16 @@
 require "bundler/setup"
 require "shift_search"
 
+# Helper method to capture stdout while allowing the block to execute
+def capture_stdout
+  original_stdout = $stdout
+  $stdout = StringIO.new
+  yield
+  $stdout.string
+ensure
+  $stdout = original_stdout
+end
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
