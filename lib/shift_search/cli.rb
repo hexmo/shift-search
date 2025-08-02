@@ -38,7 +38,12 @@ module ShiftSearch
         end
       end.parse!(args)
 
-      data = ShiftSearch::DataLoader.load(options[:file])
+      begin
+        data = ShiftSearch::DataLoader.load(options[:file])
+      rescue => e
+        puts "Error loading data: #{e.message}"
+        exit 1
+      end
 
       if options[:search]
         ShiftSearch::Search::Runner.new(data).run(
