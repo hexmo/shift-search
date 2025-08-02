@@ -12,7 +12,7 @@ module ShiftSearch
           options[:search] = query
         end
 
-        opts.on("-kKEY", "--key=KEY", "Field to search (e.g. full_name, email)") do |key|
+        opts.on("-kKEY", "--key=KEY", "Field to search (default: #{options[:key]})") do |key|
           options[:key] = key
         end
         
@@ -20,7 +20,7 @@ module ShiftSearch
           options[:duplicates] = true
         end
 
-        opts.on("-fFILE", "--file=FILE", "Path to JSON dataset") do |file|
+        opts.on("-fFILE", "--file=FILE", "Path to JSON dataset (default: #{options[:file]})") do |file|
           options[:file] = file
         end
 
