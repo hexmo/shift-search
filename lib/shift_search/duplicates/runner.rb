@@ -1,3 +1,5 @@
+require_relative "../output_formatter"
+
 module ShiftSearch
   module Duplicates
     class Runner
@@ -5,17 +7,18 @@ module ShiftSearch
         @data = data
       end
 
-      def run
+      def run(format, output: nil)
         grouped = @data.group_by { |c| c["email"] }
         duplicates = grouped.select { |_, group| group.size > 1 }
 
         if duplicates.empty?
-          pp "No duplicate emails found."
+          puts "No duplicate emails found."
         else
-          duplicates.each do |email, clients|
-            pp "Duplicate email: #{email}"
-            clients.each { |c| pp "- #{c['id']}: #{c['full_name']}" }
+          flat_duplicates = duplicates.flat_map do |email, clients|
+            clients.map { |c| c.merge("duplicate_email" => email) }
           end
+
+          ShiftSearch::OutputFormatter.output(flat_duplicates, format: format, output_path: output)
         end
       end
     end

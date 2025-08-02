@@ -1,3 +1,5 @@
+require_relative "../output_formatter"
+
 module ShiftSearch
   module Search
     class Runner
@@ -5,7 +7,7 @@ module ShiftSearch
         @data = data
       end
 
-      def run(query, key)
+      def run(query, key, format, output: nil)
         if @data.empty?
           puts "No client data to search."
           return
@@ -23,9 +25,7 @@ module ShiftSearch
         end
 
         if results.any?
-          results.each do |r|
-            puts "#{r['id']}: #{r[key]} (#{r['email']})"
-          end
+          ShiftSearch::OutputFormatter.output(results, format: format, output_path: output)
         else
           puts "No matches found for '#{query}' in '#{key}'"
         end
@@ -33,4 +33,3 @@ module ShiftSearch
     end
   end
 end
-
